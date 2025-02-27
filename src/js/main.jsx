@@ -9,10 +9,22 @@ import "bootstrap"
 import '../styles/index.css'
 
 // components
-import Home from './components/Home';
+//import Home from './components/Home';
+import MiComponente from './components/MiComponente.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
-)
+let counter = 0;
+const root = ReactDOM.createRoot(document.getElementById('app'));
+
+setInterval(() => {
+  const cinco = Math.floor(counter / 10000);
+  const cuatro = Math.floor(counter / 1000);
+  const tres = Math.floor(counter / 100);
+  const dos = Math.floor(counter / 10);
+  const uno = Math.floor(counter / 1);
+  counter++;
+
+  root.render(
+    <MiComponente digitoUno={uno} digitoDos={dos} digitoTres={tres} digitoCuatro={cuatro} digitoCinco={cinco} />
+  );
+},
+  1000);

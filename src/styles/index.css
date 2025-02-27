@@ -9,3 +9,16 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.Contador{
+    text-align: center;
+    background: blue;
+}
+.Contador div{
+    display: inline-block;
+    font-size: 60px;
+    line-height: 60px;
+    background: rgb(19, 56, 188);
+    color: white;
+    padding: 10px;
+    margin: 3px;
+}
